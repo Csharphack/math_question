@@ -8,14 +8,17 @@ namespace list
         static void Main(string[] args)
         {
             options();
+            
         }
         static void options()
         {
             triangle tri_question = new triangle();
+            circle small_circle = new circle();
 
             Console.WriteLine("1) Work our Perimeter");
             Console.WriteLine("2) Work out Area");
-            Console.WriteLine("3) Exit");
+            Console.WriteLine("3) Circle Math problem");
+            Console.WriteLine("4) Exit                      ");
 
             Console.WriteLine("--------------------------");
 
@@ -25,7 +28,7 @@ namespace list
                 Console.WriteLine("Enter Choice");
                 int choice = int.Parse(Console.ReadLine());
 
-                if (choice < 1 || choice >= 4)
+                if (choice < 1 || choice >= 5)
                 {
                     Console.WriteLine("invalid Input");
                     goto wrong_option;
@@ -42,7 +45,12 @@ namespace list
                 }
                 else if (choice == 3)
                 {
-                    Console.WriteLine("You want to exit");
+                    Console.WriteLine("Solve Circle problems");
+                    small_circle.circle_question();
+                }
+                else if (choice == 4)
+                {
+                    Console.WriteLine("Exit the program");
                     break;
                 }
             }
